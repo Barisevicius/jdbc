@@ -1,8 +1,8 @@
 package program.Entity;
 
-import jdk.vm.ci.meta.Local;
-
 import java.time.LocalDate;
+
+
 
 public class Salary {
     private Integer salary;
@@ -45,8 +45,8 @@ public class Salary {
 
     @Override
     public String toString() {
-        return
-                " salary=" + salary +
+        return "Salary{" +
+                "salary=" + salary +
                 ", fromDate=" + fromDate +
                 ", toDate=" + toDate +
                 '}';

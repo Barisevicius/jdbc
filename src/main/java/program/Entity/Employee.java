@@ -1,20 +1,31 @@
 package program.Entity;
 
 import java.time.LocalDate;
+import java.util.List;
+
 
 public class Employee {
 
     private Integer emp_no;
+
+
     private String firstName;
+
+
     private String lastName;
+
+
     private LocalDate birthDate;
+
+
     private LocalDate hireDate;
-    private Salary salary;
+
+    private List<Salary> salary;
 
     public Employee() {
     }
 
-    public Employee(Integer emp_no, String firstName, String lastName, LocalDate birthDate, LocalDate hireDate, Salary salary) {
+    public Employee(Integer emp_no, String firstName, String lastName, LocalDate birthDate, LocalDate hireDate, List<Salary> salary) {
         this.emp_no = emp_no;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -63,23 +74,24 @@ public class Employee {
         this.hireDate = hireDate;
     }
 
-    public Salary getSalary() {
+    public List<Salary> getSalary() {
         return salary;
     }
 
-    public void setSalary(Salary salary) {
+    public void setSalary(List<Salary> salary) {
         this.salary = salary;
     }
 
     @Override
     public String toString() {
-        return "Employee{" +
-                "emp_no=" + emp_no +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", birthDate=" + birthDate +
-                ", hireDate=" + hireDate +
-                ", salary=" + salary +
-                '}';
+        return
+                emp_no +
+                " " + firstName  +
+                " " + lastName +
+                " " + birthDate +
+                " " + hireDate +
+            " " + salary;
+
+
     }
 }
